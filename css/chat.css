@@ -1,0 +1,55 @@
+/* chat | список пользователей и чат */
+
+/* Общие классы, что бы не дублировать код */
+
+.chat {
+    height: 100%; /* Берем высоту родителя */
+}
+
+.grid-wrapper {
+    /* Разбиваем на 2 колонки: 1 200px 2 автоматически */
+    display: grid;
+    grid-template-columns: 200px auto;
+}
+
+.overflow {
+    scroll-snap-type: y proximity; /* устанавливаем прокрутку по вертикали */
+    overflow-x: hidden; /* убираем прокрутку по горизонтали */
+}
+
+/* Левая боковая панель - список участников чата */
+.chat__users {
+    background-color: lightsalmon;/* цвет фона */
+}
+
+.chat__users-list {
+    /* Устанавливаем внутренний контейнер */
+    height: 0;
+    width: 100%;
+}
+
+.chat__users-item {
+    padding: 10px 10px; /* Разделяем участников чата внутренними полями */
+
+    overflow: hidden; /* Прячем длинное имя пользователя */
+    text-overflow: ellipsis; /* Ставим ... при обрезке */
+    white-space: nowrap; /* Убираем перенос строки */
+
+    border: 1px solid black; /* Добавляем рамку для кадлого пользователя */
+}
+
+/* Окно с чатом */
+
+.chat__message {
+    background-color: beige; /* Цвет фона */
+}
+
+.chat__message-list {
+    /* Устанавливаем внутренний контейнер */
+    height: 0;
+    width: 100%;
+}
+
+.chat__message-item {
+    padding: 10px 10px; /* Разделяем сообщения внутренними полями */
+}

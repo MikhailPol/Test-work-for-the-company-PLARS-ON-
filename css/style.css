@@ -1,0 +1,22 @@
+/* Импортируем стили для объектов, для лучшей читаемости и редактирования */
+
+@import 'reset.css';
+@import 'header.css';
+@import 'footer.css';
+@import 'chat.css';
+
+
+/* Прибиваем хеадер и футер вверху внизу, основной контент по центру */
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+
